@@ -1,0 +1,38 @@
+$myColor: #000;
+h1 {
+    color: $myColor;
+    text-align: center;
+    padding: 10px 15px;
+  }
+  button.edit-btn {
+    background: green;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    margin: 5px 4px;
+    font-size: 15px;
+}
+button.del-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+}
+ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
+    display: none;
+}
+.form-data {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+input[type=text],input[type=email],input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
