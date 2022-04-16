@@ -18,7 +18,7 @@ const TableData = () => {
             console.log(product, 'product')
         };
         getProduct();
-    }, [product]);
+    });
 
     //Modal box
     const onEditStudent = (res) => {
@@ -58,11 +58,10 @@ const TableData = () => {
                 <tbody>
                     {product && product.data.length ?
                         <>
-                            {
-                                product.data.map(res => {
+                            {product.data.map(res => {
                                     return (
                                         <>
-                                            <tr>
+                                            <tr key={res.id}>
                                                 <td>{res.id}</td>
                                                 <td>{res.email}</td>
                                                 <td>{res.first_name}</td>
@@ -81,7 +80,7 @@ const TableData = () => {
                         : ''}
                 </tbody>
             </Table>
-            <Modal title="Edit Table data" visible={isEditing}
+            <Modal title="Edit Table data" visible={isEditing} key={product.id}
                 okText="Save"
                 onCancel={() => {
                     resetEditing();
